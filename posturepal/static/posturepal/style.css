@@ -31,11 +31,25 @@ color: #2a2a2a;
 height: 100vh; /* for full viewport height */
 display: flex; /* Use flexbox for centering */
 flex-direction: column;
-justify-content: center; 
-align-items: center; 
-text-align: center; 
+justify-content: left; 
+align-items: left; 
+text-align: left; 
 
-padding: 80px 20px;
+padding: 200px 60px;
+}
+
+.h1 {
+display: flex;
+flex-wrap: wrap; /* Allows items to wrap onto the next line */
+margin-top: 10px;
+margin-right: 200px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
 }
 
 .description {
@@ -43,17 +57,20 @@ padding: 80px 20px;
 }
 
 .parent {
-    perspective: 1000px; /* Set perspective for 3D effects */
-    transform-style: preserve-3d; /* Preserve 3D space */
-    display: flex; /* Use flexbox for centering */
+    perspective: 1000px; /* 3d perspective */
+    transform-style: preserve-3d; /* preserve 3D space */
+    display: flex; 
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
+    justify-content: left; 
+    align-items: left; 
+    text-align: left; 
 }
 
 .child {
-    border-radius: 20px; /* Rounder button shape */
-    padding: 10px 20px; /* Button size */
+    border-radius: 10px; /* rounder button shape */
+    padding: 10px 20px; /* button size */
     background-color: #212121;
     color:#ede8dd;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
@@ -61,7 +78,7 @@ padding: 80px 20px;
 }
 
 .color2 {
-    color: #6eb042;
+    color: #6eb042; 
 }
 
 /* font types */ 
