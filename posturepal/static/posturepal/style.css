@@ -8,14 +8,30 @@
 @import url("sections/subscribe.css");
 @import url("sections/footer.css");
 
-html, body { 
-
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased; /* for smooth font rendering webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* for smooth font rendering for mac */
+    overscroll-behavior: none; /* avoids bounce at end of screen */
+}
+
+.home { 
+background-color: #ede8dd;
+color: #262626;
+
+height: 100vh; /* for full viewport height */
+display: flex; /* Use flexbox for centering */
+flex-direction: column;
+justify-content: center; 
+align-items: center; 
+text-align: center; 
+
+padding: 80px 20px;
 }
 
 /* font types */ 
