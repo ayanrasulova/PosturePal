@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --buttonsize: 300px;
+} /* use var(--buttonsize); */
+
 html, body {
     -webkit-font-smoothing: antialiased; /* for smooth font rendering webkit browsers */
     -moz-osx-font-smoothing: grayscale; /* for smooth font rendering for mac */
@@ -21,8 +25,8 @@ html, body {
 }
 
 .home { 
-background-color: #ede8dd;
-color: #262626;
+background-color: #ececec;
+color: #2a2a2a;
 
 height: 100vh; /* for full viewport height */
 display: flex; /* Use flexbox for centering */
@@ -41,6 +45,32 @@ padding: 80px 20px;
   padding: 15px 20px;
   background-color: #333;
   color: white;
+}
+
+.description {
+    margin-bottom: 30px;
+}
+
+.parent {
+    perspective: 1000px; /* Set perspective for 3D effects */
+    transform-style: preserve-3d; /* Preserve 3D space */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    border-radius: 20px; /* Rounder button shape */
+    padding: 10px 20px; /* Button size */
+    background-color: #212121;
+    color:#ede8dd;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    border: none;
+}
+
+.color2 {
+    color: #6eb042;
 }
 
 /* font types */ 
@@ -155,33 +185,78 @@ padding: 80px 20px;
 
   /* animations */ 
 
-@-webkit-keyframes shadow-drop-2-center {
+.shadow-drop-2-center {
+	-webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -o-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -ms-animation:shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+
+/* add for -moz-transform:
+        -o-transform:
+        -ms-transform: */
+
+ @-webkit-keyframes shadow-drop-2-center {
     0% {
       -webkit-transform: translateZ(0);
-              transform: translateZ(0);
+        transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+
       -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -ms-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
     100% {
-      -webkit-transform: translateZ(50px);
-              transform: translateZ(50px);
+      -webkit-transform: translateZ(var(--buttonsize));
+        transform: translateZ(var(--buttonsize));
+        -moz-transform: translateZ(var(--buttonsize));
+        -o-transform: translateZ(var(--buttonsize));
+        -ms-transform: translateZ(var(--buttonsize));
+
       -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -o-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -ms-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     }
+
   }
   @keyframes shadow-drop-2-center {
     0% {
       -webkit-transform: translateZ(0);
-              transform: translateZ(0);
+        transform: translateZ(0);
+        -moz-transform:  translateZ(0);
+        -o-transform:  translateZ(0);
+        -ms-transform:  translateZ(0);
+
       -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        -ms-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
+
     100% {
-      -webkit-transform: translateZ(50px);
-              transform: translateZ(50px);
+      -webkit-transform: translateZ(var(--buttonsize));
+        transform: translateZ(var(--buttonsize));
+        -moz-transform: translateZ(var(--buttonsize));
+        -o-transform: translateZ(var(--buttonsize));
+        -ms-transform: translateZ(var(--buttonsize));
+
       -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -o-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        -ms-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     }
-  }
   
-  
+}
