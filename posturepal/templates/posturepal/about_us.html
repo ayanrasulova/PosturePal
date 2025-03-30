@@ -4,55 +4,68 @@
 {% block title %}About Us - PosturePal{% endblock %}
 
 {% block content %}
-<section class="about-us">
+<section class="page">
 
-<h2 class="poppins-bold" style="font-size:4vw; margin-bottom: 20px;">Our Team</h2>
+<h2 class="poppins-bold color2" style="font-size:4vw;">Our Team</h2>
 
     <div class="about-us-images">
-        <img src="{% static 'posturepal/assets/emilie.png' %}">
-        <img src="{% static 'posturepal/assets/ayan.png' %}">
-        <img src="{% static 'posturepal/assets/amelia.png' %}">
-        <img src="{% static 'posturepal/assets/jack.png' %}">
+        <div class="team-member">
+            <img src="{% static 'posturepal/assets/emilie.png' %}">
+            <p class="team-name poppins-bold">Emilie Deadman</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'posturepal/assets/ayan.png' %}">
+            <p class="team-name poppins-bold">Ayan Rasulova</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'posturepal/assets/amelia.png' %}">
+            <p class="team-name poppins-bold">Amelia Chen</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'posturepal/assets/jack.png' %}">
+            <p class="team-name poppins-bold">Jack Ellis</p>
+        </div>
     </div>
 
-    <p class="about-us-description poppins-bold" style=""font-size:2vw;>
-    <span class="name">Emilie Deadman</span>
-    <span class="name">Ayan Rasulova</span>
-    <span class="name">Amelia Chen</span>
-    <span class="name">Jack Ellis</span>
-    </p>
+    <div class="content-container slide-up">
+        <div class="card">
+            <div class="card-header poppins-bold color2" style="font-size:3vw;">
+                Our Mission
+            </div>
+            <div class="card-body poppins-bold" style="font-size:1.5vw;">
+                As college students, we understand the challenges of spending long hours hunched over computers, textbooks, and devices. 
+                Our mission is to help students like us maintain better posture and prevent long-term health issues caused by poor posture habits. 
+                We aim to provide tools, resources, and awareness to promote healthier lifestyles in the digital age.
+            </div>
+        </div>
+    </div>
 
-    <h2 class="poppins-bold color2" style="font-size:4vw;">Our Mission</h2>
-    <p class="about-us-description poppins-bold" style="font-size:2vw"> 
-        As college students, we understand the challenges of spending long hours hunched over computers, textbooks, and devices. 
-        Our mission is to help students like us maintain better posture and prevent long-term health issues caused by poor posture habits. 
-        We aim to provide tools, resources, and awareness to promote healthier lifestyles in the digital age.
-    </p>
-
-    <h2 class="poppins-bold color2" style="font-size:4vw;">The Importance of Posture</h2>
-    <p class="about-us-description poppins-bold" style="font-size:2vw;">
-        Good posture is more than just standing or sitting up straight—it’s about maintaining proper alignment of the spine, neck, and limbs to support overall health. 
-        Poor posture can lead to:
-    </p>
-    
-    <ul class="about-us-description poppins-bold" style="font-size:1.5vw;">
-        <li>Back pain, neck strain, and headaches.</li>
-        <li>Reduced energy levels and lung capacity.</li>
-        <li>Cognitive issues like decreased focus due to restricted blood flow to the brain.</li>
-        <li>
-            Long-term structural changes that increase the risk of pain or injury 
-            <a href="https://gindelechiropractic.com/2023/08/23/the-importance-of-maintaining-good-posture-for-students/" target="_blank">[1]</a>
-            <a href="https://specialtyorthony.com/2019/01/blog/the-importance-of-good-posture-at-a-young-age/" target="_blank">[3]</a>
-            <a href="https://www.health.harvard.edu/staying-healthy/why-good-posture-matters" target="_blank">[6]</a>.
-        </li>
-    </ul>
-
-    <p class="about-us-description poppins-bold" style="font-size:2vw;">
-        Proper posture helps distribute gravity’s force evenly across your body, reducing stress on joints and muscles. 
-        It also enhances balance, breathing efficiency, and even mental clarity 
-        <a href="https://gindelechiropractic.com/2023/08/23/the-importance-of-maintaining-good-posture-for-students/" target="_blank">[1]</a>
-        <a href="https://specialtyorthony.com/2019/01/blog/the-importance-of-good-posture-at-a-young-age/" target="_blank">[3]</a>
-        <a href="https://www.health.harvard.edu/staying-healthy/why-good-posture-matters" target="_blank">[6]</a>.
-    </p>
+    <div class="content-container slide-up">
+        <div class="card">
+            <div class="card-header poppins-bold color2" style="font-size:3vw;">
+                The Importance of Posture
+            </div>
+            <div class="card-body content poppins-bold" style="font-size:1.5vw;">
+                Good posture is more than just standing or sitting up straight—it’s about maintaining proper alignment of the spine, neck, and limbs to support overall health. 
+                Poor posture can lead to:
+                <ul class="content poppins-bold" style="font-size:1vw;">
+                    <li>Back pain, neck strain, and headaches.</li>
+                    <li>Reduced energy levels and lung capacity.</li>
+                    <li>Cognitive issues like decreased focus due to restricted blood flow to the brain.</li>
+                    <li>
+                        Long-term structural changes that increase the risk of pain or injury 
+                        <a href="https://gindelechiropractic.com/2023/08/23/the-importance-of-maintaining-good-posture-for-students/" target="_blank">[1]</a>
+                        <a href="https://specialtyorthony.com/2019/01/blog/the-importance-of-good-posture-at-a-young-age/" target="_blank">[3]</a>
+                        <a href="https://www.health.harvard.edu/staying-healthy/why-good-posture-matters" target="_blank">[6]</a>.
+                    </li>
+                </ul>
+                Proper posture helps distribute gravity's force evenly across your body, reducing stress on joints and muscles. 
+                It also enhances balance, breathing efficiency, and even mental clarity 
+                <a href="https://gindelechiropractic.com/2023/08/23/the-importance-of-maintaining-good-posture-for-students/" target="_blank">[1]</a>
+                <a href="https://specialtyorthony.com/2019/01/blog/the-importance-of-good-posture-at-a-young-age/" target="_blank">[3]</a>
+                <a href="https://www.health.harvard.edu/staying-healthy/why-good-posture-matters" target="_blank">[6]</a>.
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}
