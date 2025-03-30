@@ -50,11 +50,9 @@ def animate(frame):
         y_data.pop(0)
 
     line.set_data(x_data, y_data)
-
     ax.set_xlim(max(0, current_time - 300), current_time)
 
     print(f"Frame: {frame} | X: {posture_data[0]:.2f}, Y: {posture_data[1]:.2f}, Z: {posture_data[2]:.2f} | Score: {score:.2f}")
-    
     return line,
 
 ani = animation.FuncAnimation(fig, animate, interval=50)  
