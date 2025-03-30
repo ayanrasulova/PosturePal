@@ -4,12 +4,12 @@
 {% block title %}Home - PosturePal{% endblock %}
 
 {% block content %}
-<section class="home" style="position: relative; z-index: 1; height: 150vh;">
+<section class="home" style="position: relative; z-index: 1; height: 100vh;">
     <!-- Heading and Description -->
-    <h1 class="poppins-bold" style="font-size:4vw; z-index: 2; position: relative;">
+    <h1 class="poppins-bold fade-and-scroll" style="font-size:4vw; z-index: 2; position: relative;">
         Welcome to <span class="color2">PosturePal.</span>
     </h1>
-    <p class="home-description poppins-bold" style="font-size:2vw; z-index: 2; position: relative;">
+    <p class="home-description poppins-bold fade-and-scroll" style="font-size:2vw; z-index: 2; position: relative;">
         The smart, wearable posture assistant using IMU technology to track and correct posture in real-time.
     </p>
 
@@ -29,22 +29,26 @@
 
 </section>
 
-    <h1 class="poppins-bold" style="padding-top:120px; text-align:center; font-size:4vw; position: relative;">
+<section>
+    <h1 class="poppins-bold fade-and-scroll" style="padding-top:120px; text-align:center; font-size:4vw; position: relative;">
         How  <span class="color2">PosturePal</span> Works.
     </h1>
-
-<section class="bottom posture-images">
-    <img src="{% static 'posturepal/assets/bad posture.png' %}" alt="Bad Posture w/ PosturePal" class="slide-in-blurred-left">
-    <img src="{% static 'posturepal/assets/good posture.png' %}" alt="Good Posture w/ PosturePal" class="slide-in-blurred-right">
-
-    
 </section>
 
-<div class = "instructions poppins-bold" style="text-align:center; font-size:2vw; z-index: 2; padding-top: 50px; position: relative; box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);">
-    <li> Wear the device as shown in the picture</li>
+
+
+<section class="bottom posture-images fade-and-scroll">
+    <img src="{% static 'posturepal/assets/bad posture.png' %}" alt="Bad Posture w/ PosturePal">
+    <img src="{% static 'posturepal/assets/good posture.png' %}" alt="Good Posture w/ PosturePal">
+</section>
+
+<div class = "instructions poppins-bold" style="text-align:center; font-size:2vw; position: relative;">
+    <li>Wear the device as shown in the picture</li>
     <li> Maintain proper posture</li>
     <li>Check out your progress out under "Live Tracker"</li>
 </div>
+
+<script src="{% static 'posturepal/fade-and-scroll.js' %}"></script>
 
 {% endblock %}
 
