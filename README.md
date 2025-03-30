@@ -18,6 +18,7 @@ For the hardware, we needed to combine a power supply greater than 5 volts, an I
 For the front-end, we used Django to help build the website, styling our interface from scratch using CSS. 
 
 ## Challenges we ran into
+We had some issues with trying to sync up our graph.py file to our actual webapp. The prototype is entirely functional, we just launched it directly by running "python graph.py" in the posturepal directory instead of through a link in the website.
 
 ## Accomplishments that we're proud of
 Taking on the ambitious nature of doing a hardware based project caused a fair amount of adversity, but we were able to work past these initial struggles. We were especially proud of using collected, lithium-ion vape batteries to power our device, when they otherwise would have ended up in a landfill and harmed the environment. 
