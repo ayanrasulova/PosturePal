@@ -502,6 +502,11 @@ padding: 100px 80px;
   transition: transform 0.3s ease-in-out;
 }
 
+
+.about-us-images img:hover {
+  transform: rotate(10deg);
+}
+
 .team-member {
   display: flex;
   flex-direction: column; /* Ensures text is below image */
