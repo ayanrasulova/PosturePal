@@ -1,4 +1,5 @@
 {% extends "posturepal/base.html" %}
+{% load static %}
 
 {% block title %}Live Checker - PosturePal{% endblock %}
 
@@ -7,5 +8,14 @@
     <h1 class="poppins-bold" style="font-size:4vw;">
         Live Checker
     </h1>
+
+    <!-- Animated Image Below the Title -->
+    <div id="live-tracker">
+        <img id="giraffeAnimation" src="{% static 'posturepal/assets/bad1.png' %}" alt="Animation">
+    </div>
+
 </section>
+
+<!-- Link to app.js -->
+<script src="{% static 'js/app.js' %}"></script>
 {% endblock %}
