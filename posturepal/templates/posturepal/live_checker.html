@@ -13,5 +13,29 @@
         <img class = "giraffe" id="giraffeAnimation" src="{% static 'posturepal/assets/bad1.png' %}" alt="Animation">
     </div>
 
+
+<!-- Button to launch graph.py -->
+<button class = "home-description python-button poppins-bold" style="font-size:2vw;" id="launchGraphButton">
+    Launch Graph
+</button>
+
+<script>
+document.getElementById('launchGraphButton').addEventListener('click', () => {
+    fetch('/run-graph', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status) {
+                alert(data.status);
+            } else if (data.error) {
+                alert(`Error: ${data.error}`);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to launch graph.');
+        });
+});
+</script>
+
 </section>
 {% endblock %}

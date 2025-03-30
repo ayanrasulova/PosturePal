@@ -4,43 +4,51 @@
 
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-import requests
-import time
+import random
 
-x_data = []  # time data (seconds) for x axis
-y_data = []  # posture score data for y axis
+x_data = []  
+y_data = [] 
 
-fig, ax = plt.subplots() #c reates axis
-ax.set_xlim(0, 300)  # 5m of data
-ax.set_ylim(0, 100)  
+fig, ax = plt.subplots()
+ax.set_xlim(0, 300)  
+ax.set_ylim(0, 100) 
 ax.set_xlabel('Time (seconds)')
 ax.set_ylabel('Posture Score')
 ax.set_title('Real-Time Posture Score Tracking')
 
 line, = ax.plot([], [], lw=2)
 
+def posture_score(data):
+    x, y, z = data
+    return 100 / (1 + (x - 10)**2 + y**2 + z**2)
+# with "ideal posture values," X will be hovering around ~10, Y and Z will be close to 0
+# with "poor posture values," X will be approaching 0, Y and Z will either increase or decrease
+# good posture values - posture score approaches 100, bad posture values - posture score approaches 0.33
 
-# Update function for animation
-def update(frame):
-    try:
-        # get score from flask
-        response = requests.post('http://127.0.0.1:5000/calculate', json={'x': 10, 'y': 0, 'z': 0})
-        data = response.json()
-        posture_score = data.get('score', 0)  # default to 0 if no score is returned
+def animate(frame):
+    global x_data, y_data
 
-        # update time and posture score data
-        current_time = len(x_data)  # time in s since start
-        x_data.append(current_time)
-        y_data.append(posture_score)
+    posture_data = [random.uniform(8, 12), random.uniform(-2, 2), random.uniform(-2, 2)]
 
-        line.set_data(x_data, y_data)
-        ax.set_xlim(max(0, current_time - 300), current_time) # x axis only shows last 300s (5m)
+    score = posture_score(posture_data)
 
-    except Exception as e:
-        print(f"Error fetching posture score: {e}")
+    current_time = len(x_data)  
+    x_data.append(current_time)
+    y_data.append(score)
 
+    if len(x_data) > 300:
+        x_data.pop(0)
+        y_data.pop(0)
+
+    line.set_data(x_data, y_data)
+
+    ax.set_xlim(max(0, current_time - 300), current_time)
+
+    print(f"Frame: {frame} | X: {posture_data[0]:.2f}, Y: {posture_data[1]:.2f}, Z: {posture_data[2]:.2f} | Score: {score:.2f}")
+    
     return line,
 
-ani = animation.FuncAnimation(fig, update, interval=1000)  # animates (update every second)
+ani = animation.FuncAnimation(fig, animate, interval=1000)  
 
 plt.show()
+
