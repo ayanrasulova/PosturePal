@@ -18,10 +18,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="{% url 'index' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Home</a>
-        <a href="{% url 'live_checker' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Live Tracker</a>
-        <a href="{% url 'about_us' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">About Us</a>
-        <a href="{% url 'resources' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Resources</a>
+         <img src="{% static 'posturepal/assets/posturepal-logo.png' %}" alt="PosturePal Logo" class="navbar-logo" style="height: 60px; margin-right: 10px; margin-left: 10px;">
+
+         <a href="{% url 'index' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Home</a>
+         <a href="{% url 'live_checker' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Live Tracker</a>
+         <a href="{% url 'about_us' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">About Us</a>
+         <a href="{% url 'resources' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Resources</a>
     </nav>
 
     {% block content %}
