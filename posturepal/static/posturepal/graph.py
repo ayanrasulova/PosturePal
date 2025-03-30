@@ -1,5 +1,6 @@
-# to run the graph: in terminal run these commands: 
-# python app.py
+# to run the graph: in terminal:
+# cd into posturepal > static > posturepal
+# run the following command: 
 # python graph.py
 
 import matplotlib.pyplot as plt
@@ -19,10 +20,10 @@ ax.set_title('Real-Time Posture Score Tracking')
 
 line, = ax.plot([], [], lw=2)
 
-# Add green highlighted area for ideal posture range (15-100)
-ax.axhspan(15, 100, facecolor='#6eb042', alpha=0.2)  # Green with 20% opacity
+# add green highlighted area for ideal posture range (15-100)
+ax.axhspan(15, 100, facecolor='#6eb042', alpha=0.2)  # green with 20% opacity
 
-line, = ax.plot([], [], lw=2, color='#2a2a2a')  # Dark gray line
+line, = ax.plot([], [], lw=2, color='#2a2a2a')  # dark gray line
 
 
 def posture_score(data):
