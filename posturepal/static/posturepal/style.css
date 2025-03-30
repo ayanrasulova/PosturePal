@@ -41,6 +41,12 @@ margin-top: 55px;
 padding: 200px 60px;
 }
 
+.body {
+    height: 100vh; /* for full viewport height */
+width: 100%;
+background-color: #ececec;
+}
+
 .h1 {
 display: flex;
 flex-wrap: wrap; /* Allows items to wrap onto the next line */
@@ -48,23 +54,31 @@ margin-top: 10px;
 margin-right: 300px;
 }
 
+#noneall a{
+    text-decoration:none;
+}
+
+#thisLink{ /*  id="thisLink" to get rid of underscore */
+    text-decoration: none;
+}
+
 .navbar {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px;
+  padding: 25px 30px;
   background-color: #ececec;
   z-index: 2;
 
   position: fixed;
   top: 0px;
 
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
-  -moz-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
-  -o-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
-  -ms-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0,0,0,0.2));
+  filter: drop-shadow(5px 10px 5px rgba(0,0,0,0.2));
+  -moz-filter: drop-shadow(5px 10px 5px rgba(0,0,0,0.2));
+  -o-filter: drop-shadow(5px 10px 5px rgba(0,0,0,0.2));
+  -ms-filter: drop-shadow(5px 10px 5px rgba(0,0,0,0.2));
 }
 
 .navbar a {

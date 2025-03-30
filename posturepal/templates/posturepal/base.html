@@ -18,10 +18,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="{% url 'index' %}" class="description poppins-bold" style="font-size:1.6vw;">Home</a>
-        <a href="{% url 'live_checker' %}" class="description poppins-bold" style="font-size:1.6vw;">Live Tracker</a>
-        <a href="{% url 'about_us' %}" class="description poppins-bold" style="font-size:1.6vw;">About Us</a>
-        <a href="{% url 'resources' %}" class="description poppins-bold" style="font-size:1.6vw;">Resources</a>
+        <a href="{% url 'index' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Home</a>
+        <a href="{% url 'live_checker' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Live Tracker</a>
+        <a href="{% url 'about_us' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">About Us</a>
+        <a href="{% url 'resources' %}" id="thisLink" class="description poppins-bold" style="font-size:1.6vw;">Resources</a>
     </nav>
 
     {% block content %}
