@@ -11,13 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:site_name" content="PosturePal">
     <link rel="stylesheet" href="{% static 'posturepal/style.css' %}">
+    <link rel="icon" type="image/posturepal-logo.png" href="posturepal/assets/posturepal-logo.png">
 
-    <script defer src="{% static 'posturepal/app.js' %}"></script>
+
+    <script defer src="{% static 'posturepal/app1.js' %}"></script>
 </head>
 <body>
     <nav class="navbar">
         <a href="{% url 'index' %}" class="description poppins-bold" style="font-size:2vw;">Home</a>
-        <a href="{% url 'live_checker' %}" class="description poppins-bold" style="font-size:2vw;">Live Checker</a>
+        <a href="{% url 'live_checker' %}" class="description poppins-bold" style="font-size:2vw;">Live Tracker</a>
         <a href="{% url 'about_us' %}" class="description poppins-bold" style="font-size:2vw;">About Us</a>
         <a href="{% url 'resources' %}" class="description poppins-bold" style="font-size:2vw;">Resources</a>
     </nav>
