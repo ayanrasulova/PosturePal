@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 0;
 }
 
 :root {
@@ -54,6 +55,7 @@ margin-right: 300px;
   align-items: center;
   padding: 15px 15px;
   background-color: #ececec;
+  z-index: 2;
 
   position: fixed;
   top: 0px;
@@ -223,8 +225,6 @@ margin-right: 300px;
     -moz-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     -o-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     -ms-animation:shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-    transition: transform 0.3s ease-in-out; 
 }
 
 
@@ -300,7 +300,11 @@ margin-right: 300px;
   align-items: center; 
   height: 100%; 
   width: 100%; 
-  padding-right: 5%;
+  padding-right: 6%;
+  padding-bottom: 20%;
+  margin-top: 40px;
+  position: absolute; right: 6%; top: 26%;
+  transform: scale(1.2,1.2);
 }
 
 /* giraffe animation */
