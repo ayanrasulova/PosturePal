@@ -25,7 +25,8 @@ html, body {
     overscroll-behavior: none; /* avoids bounce at end of screen */
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     min-height: 100vh;
     background-color: #ececec;
 }
