@@ -408,7 +408,6 @@ slide/blur in R
     justify-content: center; 
     gap: 50px; 
     padding-top: 10px; 
-    padding-bottom: 10px;
     z-index: 1;
     position: relative;
 }
@@ -416,6 +415,11 @@ slide/blur in R
 .posture-images img {
     width: 500px;
     height: auto;
+    padding-top: 40px;
+}
+
+.instructions {
+  padding-bottom: 30px;
 }
 
 .slide-in-blurred-left {
