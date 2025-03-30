@@ -2,6 +2,8 @@
 The smart, wearable posture assistant using IMU technology to track and correct posture in real-time.
 Entry for HooHacks 2025, submitted by Ayan Rasulova, Emilie Deadman, Amelia Chen, Jack Ellis
 
+![logo](https://github.com/user-attachments/PosturePal/webappscreenshot.png)
+
 ## Inspiration
 As computer science majors, our team understands the strain of spending long hours at a desk, often leading to poor posture and back pain. To address this, we developed PosturePal— a tool designed to help users maintain better posture through a simple, user-friendly interface.
 
