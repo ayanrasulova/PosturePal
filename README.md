@@ -18,7 +18,12 @@ For the hardware, we needed to combine a power supply greater than 5 volts, an I
 For the front-end, we used Django to help build the website, styling our interface from scratch using CSS. 
 
 ## Challenges we ran into
+
 We had some issues with trying to sync up our graph.py file to our actual webapp. The prototype is entirely functional, we just launched it directly by running "python graph.py" in the posturepal directory instead of through a link in the website.
+
+
+With the nature of this product, there are a lot of stages of communication from one device to another. A lot can go wrong here, especially during the wireless phase, and it did. As information was converting from float to byte and back to float multiple times, the hardware occasionally fell out of sync, and when the data was reinterpreted, wild and impossible values were being read. To solve this, a primitive hardware API was developed that included a start byte to indicate to the receiver where to start interpreting.
+
 
 ## Accomplishments that we're proud of
 Taking on the ambitious nature of doing a hardware based project caused a fair amount of adversity, but we were able to work past these initial struggles. We were especially proud of using collected, lithium-ion vape batteries to power our device, when they otherwise would have ended up in a landfill and harmed the environment. 
