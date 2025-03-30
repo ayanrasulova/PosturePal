@@ -347,7 +347,8 @@ padding: 100px 80px;
 }
 
 .name {
-  margin-right: 60px;
+  margin-right: 30px;
+  letter-spacing:5px;
 }
 
 .about-us-description {
@@ -367,7 +368,7 @@ padding: 100px 80px;
 }
 
 .about-us-images img {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 
