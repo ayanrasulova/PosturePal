@@ -13,6 +13,9 @@ PosturePal uses accelerometer data to track the posture of its user. This data i
 Then, the numbers are ran through an algorithm to determine a "posture quality score." This score is then displayed through our "live tracker" feature in the form of a graph, tracking a user's general changes in their posture over time. When a user's posture reaches a negative range, the webapp displays this to inform them and help them correct their spine. 
 
 ## How we built it
+For the hardware, we needed to combine a power supply greater than 5 volts, an IMU to measure the necessary data, an RF Nano for wireless communication and a charging circuit to keep the batteries going after they lose their initial charge. As it was easy to collect from various uva students, the batteries used are reclaimed from rechargeable disposable vapes. However, they only provide 3.7V each, and safe recharging circuits on the market only supported up to 3.7V when we need 5. The new charging circuit consisted of an adafruit 3.7V battery charging circuit, two 3.7V vape batteries, and a 3PDT switch. The switch causes the batteries to alternate between being connected in parallel, where they can charge safely and in series where they can output 7.4V, a power supply within our desired range. The IMU, an Adafruit ICM 20649 6-DOF model, communicates important data with the RF Nano via I2C communication. 
+
+For the front-end, we used Django to help build the website, styling our interface from scratch using CSS. 
 
 ## Challenges we ran into
 
