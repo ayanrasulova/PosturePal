@@ -329,6 +329,10 @@ margin-right: 300px;
 }
 
 .about-us {
+background-color: #ececec;
+color: #2a2a2a;
+
+
 height: 100vh; /* for full viewport height */
 width: 100%;
 display: flex; /* Use flexbox for centering */
