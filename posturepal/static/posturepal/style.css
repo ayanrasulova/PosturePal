@@ -558,6 +558,12 @@ padding: 100px 80px;
   text-align: left;
 }
 
+.card-body ul {
+  padding-left: 20px; /* Adds space between text and bullet points */
+  margin-left: 20px; /* Moves the entire list to the right */
+}
+
+
 .content {
   margin-top: 5%;
   margin-bottom: 5%;
