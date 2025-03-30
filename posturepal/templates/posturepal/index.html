@@ -12,7 +12,10 @@
     <p class="home-description poppins-bold" style="font-size:2vw; z-index: 2; position: relative;">
         The smart, wearable posture assistant using IMU technology to track and correct posture in real-time.
     </p>
-    <!-- <a href = "{% url 'live_checker' %}" id="thisLink" class="child poppins-bold shadow-drop-2-center">Access Live Tracker</a> -->
+    <div class="parent">
+        <a href = "{% url 'live_checker' %}" id="thisLink" class="child poppins-bold shadow-drop-2-center">Access Live Tracker</a>
+    </div>
+
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.0.0/dist/model-viewer.min.js"></script>
 
     <!-- 3D Model Viewer -->
@@ -22,9 +25,15 @@
         shadow-intensity="0.5"
         auto-rotate
         camera-controls
-        style="position: absolute; top: 0; left: 25%; width: 100vw; height: 100vh; z-index: -1;"
-        disable-zoom
+        style="position: absolute; top: 0; left: 25%; width: 100vw; height: 100vh; z-index: -1;">
     </model-viewer>
 
 </section>
+
+<section class="posture-images">
+    <img src="{% static 'posturepal/assets/bad posture.png' %}" alt="Bad Posture w/ PosturePal" class="slide-in-blurred-left">
+    <img src="{% static 'posturepal/assets/good posture.png' %}" alt="Good Posture w/ PosturePal" class="slide-in-blurred-right">
+</section>
+
 {% endblock %}
+
