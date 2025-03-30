@@ -1,52 +1,45 @@
 import serial
 import serial.tools.list_ports
 import struct
+import time
 
-good_cereal = None
-#Prenegotiated start byte that computer looks for
-start_byte = '@'
+# Define serial settings
+BAUD_RATE = 115200
+START_BYTE = b'@'  # The expected start byte
+FLOAT_SIZE = 4  # Each float is 4 bytes
+MESSAGE_SIZE = 13  # 1 start byte + 3 floats (4 bytes each)
 
-cereal = None
-
-# collect X Y and Z data, and initialize serial if it hasn't already
-def update():
-    if cereal == None:
-        cereal = instantiateSerial
-    data = ('f', [0.0, 0.0, 0.0])
-    data = collect()
-    return data
- 
-#open and begin serial
-def instantiateSerial():
+def find_serial_port():
+    """Find and return the first available USB serial port."""
     ports = list(serial.tools.list_ports.comports())
     for port in ports:
-        if "USB" in port.description:
-            good_cereal = port.device
-            break
-    if good_cereal:
-        try:
-            cereal = serial.Serial(good_cereal, 115200)
-            print(f"Connected to rf nano on port {good_cereal}")
-        except serial.SerialException as e:
-            print(f"Error opening serial port: {e}")
-    else:
-        print("Rf nano not found")
+        if "USB" in port.description:  # Adjust if necessary for your OS
+            return port.device
+    return None
 
-#collect data
-def collect():
-    c = bytes(1)
-    if (cereal.in_waiting>0):
-        c = cereal.read(1)
-        if(c.decode('ascii')=='@'):
-            x = cereal.read(4)
-            fX = struct.unpack('<f', x)[0]
-            y = cereal.read(4)
-            fY = struct.unpack('<f', y)[0]
-            z = cereal.read(4)
-            fZ = struct.unpack('<f', z)[0]
-    data = ('f', [fX, fY, fZ])
-    return data    
-
-        
+def read_serial_data():
+    """Read a 13-byte message from the serial port and return a list of 3 floats."""
+    port = find_serial_port()
     
+    if not port:
+        print("No USB serial device found.")
+        return None
 
+    try:
+        with serial.Serial(port, BAUD_RATE, timeout=2) as ser:
+            while True:
+                # Read the first byte and check if it's the start byte
+                start = ser.read(1)
+                if start == START_BYTE:
+                    # Read the next 12 bytes (3 floats)
+                    data_bytes = ser.read(12)
+                    if len(data_bytes) == 12:
+                        # Unpack the bytes into three floats
+                        floats = struct.unpack('<fff', data_bytes)
+                        return list(floats)  # Convert tuple to list
+                
+                # If the start byte isn't found, discard and continue reading
+                time.sleep(0.01)  # Small delay to avoid CPU overload
+    except serial.SerialException as e:
+        print(f"Serial error: {e}")
+        return None
