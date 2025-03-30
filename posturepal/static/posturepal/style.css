@@ -23,13 +23,17 @@ html, body {
     -webkit-font-smoothing: antialiased; /* for smooth font rendering webkit browsers */
     -moz-osx-font-smoothing: grayscale; /* for smooth font rendering for mac */
     overscroll-behavior: none; /* avoids bounce at end of screen */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ececec;
 }
 
 .home { 
-background-color: #ececec;
 color: #2a2a2a;
 
-height: 100vh; /* for full viewport height */
+min-height: 100vh; /* for full viewport height */
 width: 100%;
 display: flex; /* Use flexbox for centering */
 flex-direction: column;
