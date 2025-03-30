@@ -1,5 +1,5 @@
 # PosturePal 
-The smart, wearable posture assistant using IMU technology to track and correct posture in real-time.
+The smart, wearable posture assistant that uses IMU technology to track and correct posture in real-time.
 Entry for HooHacks 2025, submitted by Ayan Rasulova, Emilie Deadman, Amelia Chen, Jack Ellis
 
 ## Inspiration
