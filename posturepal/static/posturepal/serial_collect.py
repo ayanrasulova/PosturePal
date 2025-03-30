@@ -17,7 +17,7 @@ def find_serial_port():
             return port.device
     return None
 
-def read_serial_data():
+def update():
     """Read a 13-byte message from the serial port and return a list of 3 floats."""
     port = find_serial_port()
     
