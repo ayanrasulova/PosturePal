@@ -291,19 +291,19 @@ margin-right: 300px;
 
   }
 
- /* General Live Tracker container */
+ /* live tracker container */
 #live-tracker {
   display: flex;
-  justify-content: flex-end;  /* Align the animation to the right side of the page */
-  align-items: center;  /* Center the animation vertically */
-  height: 100%;  /* Full height of the parent container */
-  width: 100%;  /* Full width of the parent container */
-  padding-right: 5%;  /* Some padding on the right to avoid being too close to the edge */
+  justify-content: flex-end;  
+  align-items: center; 
+  height: 100%; 
+  width: 100%; 
+  padding-right: 5%;
 }
 
-/* Animated Image */
+/* giraffe animation */
 #giraffeAnimation {
-  max-width: 100%;  /* Ensures the image doesn't overflow its container */
-  height: auto;  /* Maintains aspect ratio */
-  max-height: 450px;  /* Limits the maximum height to 300px to make it look consistent */
+  max-width: 100%; 
+  height: auto; 
+  max-height: 450px; 
 }
