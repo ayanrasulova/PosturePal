@@ -18,9 +18,15 @@ ax.set_title('Real-Time Posture Score Tracking')
 
 line, = ax.plot([], [], lw=2)
 
+# Add green highlighted area for ideal posture range (15-100)
+ax.axhspan(15, 100, facecolor='#6eb042', alpha=0.2)  # Green with 20% opacity
+
+line, = ax.plot([], [], lw=2, color='#2a2a2a')  # Dark gray line
+
+
 def posture_score(data):
     x, y, z = data
-    return 100 / (1 + (x - 10)**2 + y**2 + z**2)
+    return (100) / (1 + (x - 10)**2 + y**2 + z**2)
 # with "ideal posture values," X will be hovering around ~10, Y and Z will be close to 0
 # with "poor posture values," X will be approaching 0, Y and Z will either increase or decrease
 # good posture values - posture score approaches 100, bad posture values - posture score approaches 0.33
